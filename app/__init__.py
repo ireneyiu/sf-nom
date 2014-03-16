@@ -1,8 +1,7 @@
 from flask import Flask
 
-app = Flask(__name__)
-app.debug = True
-app.config['API_JSON'] = 'http://data.sfgov.org/resource/rqzj-sfat.json';
-app.config['GOOGLE_API_KEY'] = 'AIzaSyCL0ibBZq-hze7LKR1i3Q38fDO3GqiuwXI';
+app = Flask(__name__, instance_relative_config=True)
+app.config.from_object('app.config')
+app.config.from_pyfile('application.cfg', silent=True)
 
 from app import views
