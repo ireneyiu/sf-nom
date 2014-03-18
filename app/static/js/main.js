@@ -33,10 +33,12 @@
 
 
 $(document).on('ready', function() {
-	var searchView = new SearchView({ model: Search});
-	var map = new Map();
-	var mapView = new MapView();
-//	google.maps.event.addDomListener(window, 'load', initialize);
+	var vent = {}; // or App.vent depending how you want to do this
+	_.extend(vent, Backbone.Events);
+	var searchView = new SearchView({model: Search, vent: vent});
+	var mapView = new MapView({vent: vent});
+
+//	var markerView = new MarkerView({vent: vent});
 });
 
 // var foodTruck = new FoodTruck();
