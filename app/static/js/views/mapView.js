@@ -11,6 +11,9 @@ var MapView = Backbone.Model.extend({
   render: function() {
    $(this.el).append(this.map);
   },
+  add: function() {
+    console.log('adding!');
+  },
   updateAddress: function(data) {
     // var marker = new Marker({latitude: data.k, longitude: data.A});
     // var markerView = new MarkerView({model: marker});
