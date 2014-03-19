@@ -5,6 +5,10 @@ var SearchView = Backbone.View.extend({
   },
   initialize: function(options) {
     this.vent = options.vent;
+    this.map = options.map;
+    this.autocomplete = new google.maps.places.Autocomplete(document.getElementById('search'));
+    console.log(this.autocomplete);
+    this.autocomplete.bindTo('bounds', this.map);
   },
   search: function(e) {
     e.preventDefault();

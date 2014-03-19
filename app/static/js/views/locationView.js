@@ -13,7 +13,6 @@ var LocationView = Backbone.View.extend({
       content += '<p>' + model.get('address')+ '</p>';
       content += '<p>' + model.get('fooditems')+ '</p>';
 
-
       var info = new google.maps.InfoWindow({
         content: content
       });
