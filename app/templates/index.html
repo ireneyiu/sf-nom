@@ -13,10 +13,10 @@
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
-	  <form class="navbar-form" role="search">
+	  <div class="navbar-form" role="search">
       <input id="search" type="text" class="form-control" placeholder="Enter Location">
-<!--       <button type="submit" class="btn btn-default">Submit</button> -->
-   </form>
+      <button id="submit" class="btn btn-default">Submit</button>
+   </div>
 	</nav>
   <div id="map-canvas"></div>
 
@@ -24,7 +24,6 @@
   <script src="../static/js/underscore.js"></script>
   <script src="../static/js/backbone.js"></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
-  <script src="../static/js/models/result.js"></script>
   <script src="../static/js/models/search.js"></script>
   <script src="../static/js/models/map.js"></script>
   <script src="../static/js/models/marker.js"></script>

@@ -10,6 +10,7 @@ var SearchView = Backbone.View.extend({
     google.maps.event.addListener(this.autocomplete, 'place_changed', this.search);
   },
   search: function() {
+    console.log('search!');
     var self = this;
     var location = this.$el.val();
     this.geocoder.geocode({'address': location}, function(results, status) {
