@@ -1,6 +1,7 @@
 from app import app
 from flask import render_template
 import requests
+import json
 
 @app.route('/')
 def index():
@@ -9,4 +10,4 @@ def index():
 @app.route('/locations')
 def locations():
   response = requests.get("http://data.sfgov.org/resource/rqzj-sfat.json")
-  return response.text
+  return json.dumps(response.json())

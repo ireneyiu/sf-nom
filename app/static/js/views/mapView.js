@@ -1,6 +1,7 @@
 var MapView = Backbone.Model.extend({
   el: '#map-canvas',
   initialize: function(options) {
+    console.log(options);
     _.bindAll(this, 'updateAddress');
     options.vent.bind('address:update', this.updateAddress);
     this.model = new Map();

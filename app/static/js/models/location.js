@@ -1,1 +1,1 @@
-var Location = Backbone.Model.extend();
+var Location = Backbone.Model.extend({});
