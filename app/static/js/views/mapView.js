@@ -1,7 +1,6 @@
 var MapView = Backbone.Model.extend({
   el: '#map-canvas',
   initialize: function(options) {
-    console.log(options);
     _.bindAll(this, 'updateAddress');
     options.vent.bind('address:update', this.updateAddress);
     this.model = new Map();
@@ -12,7 +11,6 @@ var MapView = Backbone.Model.extend({
    $(this.el).append(this.map);
   },
   add: function() {
-    console.log('adding!');
   },
   updateAddress: function(data) {
     // var marker = new Marker({latitude: data.k, longitude: data.A});
