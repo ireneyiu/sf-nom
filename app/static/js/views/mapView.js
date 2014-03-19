@@ -12,11 +12,6 @@ var MapView = Backbone.Model.extend({
   },
   updateCenter: function(data) {
     var latLng = new google.maps.LatLng(data.k, data.A);
-    var marker = new google.maps.Marker({
-      position: latLng,
-      map: this.map,
-      title: "Current Location"
-    });
     this.map.panTo(latLng);
     this.map.setZoom(17);
   }
