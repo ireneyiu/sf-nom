@@ -2,7 +2,7 @@ var CenterView = Backbone.View.extend({
   initialize: function(options) {
     _.bindAll(this, 'render', 'updateCenter');
     options.vent.bind('address:update', this.updateCenter);
-    this.map = options.map
+    this.map = options.map;
     this.render();
   },
   render: function() {
@@ -12,6 +12,7 @@ var CenterView = Backbone.View.extend({
       map: this.map,
       title: "Current Location"
     });
+    return this.marker;
   },
   updateCenter: function(data) {
     var latLng = new google.maps.LatLng(data.k, data.A);
