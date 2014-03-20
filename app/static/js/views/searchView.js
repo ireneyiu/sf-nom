@@ -1,13 +1,16 @@
 var SearchView = Backbone.View.extend({
   el: '#search',
   initialize: function(options) {
-    _.bindAll(this, 'search');
+    _.bindAll(this, 'render', 'search');
     this.vent = options.vent;
     this.map = options.map;
     this.geocoder = new google.maps.Geocoder();
-    this.autocomplete = new google.maps.places.Autocomplete(this.el);
-    this.autocomplete.bindTo('bounds', this.map);
-    google.maps.event.addListener(this.autocomplete, 'place_changed', this.search);
+    this.render();
+  },
+  render: function() {
+    var autocomplete = new google.maps.places.Autocomplete(this.el);
+    autocomplete.bindTo('bounds', this.map);
+    google.maps.event.addListener(autocomplete, 'place_changed', this.search);
   },
   search: function() {
     var self = this;

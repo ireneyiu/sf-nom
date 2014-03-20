@@ -1,6 +1,6 @@
 var LocationView = Backbone.View.extend({
   initialize: function(options) {
-    _.bindAll(this, 'render', 'renderInfo');
+    _.bindAll(this, 'render');
     this.map = options.map;
     this.collection.fetch({
       success: this.render
