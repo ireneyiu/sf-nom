@@ -7,7 +7,7 @@ var Map = Backbone.Model.extend({
     if (navigator.geolocation) {
       browserSupportFlag = true;
       navigator.geolocation.getCurrentPosition(function(position) {
-
+        
       });
     }
   }
