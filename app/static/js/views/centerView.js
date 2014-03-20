@@ -1,6 +1,6 @@
 var CenterView = Backbone.View.extend({
   initialize: function(options) {
-    _.bindAll(this, 'render', 'updateCenter');
+    _.bindAll(this, 'render', 'update');
     options.vent.bind('address:update', this.updateCenter);
     this.map = options.map;
     this.render();
