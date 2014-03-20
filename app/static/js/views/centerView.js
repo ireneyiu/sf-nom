@@ -16,6 +16,6 @@ var CenterView = Backbone.View.extend({
   },
   updateCenter: function(data) {
     var latLng = new google.maps.LatLng(data.k, data.A);
-    this.marker.position = latLng;
+    this.marker.setPosition(latLng);
   }
 });

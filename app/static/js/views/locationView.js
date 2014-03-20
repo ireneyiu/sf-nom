@@ -3,7 +3,7 @@ var LocationView = Backbone.View.extend({
     _.bindAll(this, 'render');
     this.map = options.map;
     this.collection.fetch({
-   //   success: this.render
+  //    success: this.render
     });
   },
   render: function() {
