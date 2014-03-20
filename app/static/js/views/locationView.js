@@ -5,6 +5,7 @@ var LocationView = Backbone.View.extend({
     this.collection.fetch({
       success: this.render
     });
+    this.icon = options.icon;
   },
   render: function() {
     var self = this;
@@ -12,6 +13,7 @@ var LocationView = Backbone.View.extend({
       var latLng = new google.maps.LatLng(model.get('latitude'), model.get('longitude'));
       var location = new google.maps.Marker({
         position: latLng,
+        icon: self.icon,
         title: model.get('applicant'),
         map: self.map
       });
