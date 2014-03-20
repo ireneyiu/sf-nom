@@ -10,7 +10,7 @@ var MapView = Backbone.Model.extend({
   render: function() {
    $(this.el).append(this.map);
   },
-  updateCenter: function(data) {
+  update: function(data) {
     var latLng = new google.maps.LatLng(data.k, data.A);
     this.map.panTo(latLng);
     this.map.setZoom(17);
