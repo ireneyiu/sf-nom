@@ -19,7 +19,7 @@ var LocationView = Backbone.View.extend({
       var info = new Info({
         name: model.get('applicant'),
         address: model.get('address'),
-        food: model.get('foodItems'),
+        food: model.get('fooditems'),
         location: location
       });
 
