@@ -1,1 +1,1 @@
-var Info = Backbone.Model.extend({});
+App.Models.Info = Backbone.Model.extend({});

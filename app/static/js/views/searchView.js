@@ -1,4 +1,4 @@
-var SearchView = Backbone.View.extend({
+App.Views.SearchView = Backbone.View.extend({
   el: '#search',
   initialize: function(options) {
     _.bindAll(this, 'render', 'search');

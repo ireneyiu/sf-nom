@@ -1,4 +1,4 @@
-var InfoView = Backbone.View.extend({
+App.Views.InfoView = Backbone.View.extend({
 	initialize: function() {
 		_.bindAll(this, 'render');
 	},

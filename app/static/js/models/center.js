@@ -1,4 +1,4 @@
-var Center = Backbone.Model.extend({
+App.Models.Center = Backbone.Model.extend({
   defaults: {
     latitude: 37.7833,
     longitude: -122.4167,

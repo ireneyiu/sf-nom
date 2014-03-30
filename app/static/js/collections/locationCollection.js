@@ -1,4 +1,4 @@
-var LocationCollection = Backbone.Collection.extend({
-    model: Location,
+App.Collections.LocationCollection = Backbone.Collection.extend({
+    model: App.Models.Location,
     url: '/locations'
 });

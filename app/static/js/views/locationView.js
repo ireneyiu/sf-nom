@@ -1,4 +1,4 @@
-var LocationView = Backbone.View.extend({
+App.Views.LocationView = Backbone.View.extend({
   initialize: function(options) {
     _.bindAll(this, 'render');
     this.map = options.map;
@@ -18,14 +18,14 @@ var LocationView = Backbone.View.extend({
         map: self.map
       });
 
-      var info = new Info({
+      var info = new App.Models.Info({
         name: model.get('applicant'),
         address: model.get('address'),
         food: model.get('fooditems'),
         location: location
       });
 
-      var infoWindow = new InfoView({model: info}).render();
+      var infoWindow = new App.Views.InfoView({model: info}).render();
       google.maps.event.addListener(location, 'click', function() {
         infoWindow.open(self.map, location);
       });
