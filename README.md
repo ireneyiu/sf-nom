@@ -1,6 +1,6 @@
 # SF Food Trucks
 
-This application allows you to find food trucks hear a location in San Francisco.
+This application allows you to find food trucks near a location in San Francisco.
 
 Available here: [Heroku](http://sf-nom.herokuapp.com)
 
