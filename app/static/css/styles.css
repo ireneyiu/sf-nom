@@ -15,3 +15,7 @@ body {
 #search {
 	width: 30%;
 }
+
+.searchbar {
+  margin-bottom: 0;
+}
