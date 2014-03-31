@@ -4,7 +4,7 @@ App.Views.MapView = Backbone.Model.extend({
     _.bindAll(this, 'render','update');
     this.model = options.model;
     options.vent.bind('address:update', this.update);
-    this.map = new google.maps.Map(document.getElementById('map-canvas'), this.model.attributes);
+    this.map = new google.maps.Map(document.querySelector(this.el), this.model.attributes);
     this.render();
   },
   render: function() {
