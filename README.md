@@ -22,9 +22,11 @@ I chose to create a minimal backend using Flask. I have no prior Flask experienc
 - [Google Places API](https://developers.google.com/places/)
 - [Twitter Bootstrap](http://getbootstrap.com/)
 
-Most of the application logic is handled in Backbone. I used the Google Maps API to set the data points on a map and the Google Places API for the location autocomplete. The search bar styling comes from Twitter Bootstrap.
+Most of the application logic is handled in Backbone. I used the Google Maps API to set the data points on a map and the Google Places API for the location autocomplete. The pin should initially be set to the user's current location. The search bar was styled using Twitter Bootstrap.
 
 I have no prior experience in Backbone or the Google API's, but I tried to approach the problem in an object-oriented way, breaking things down into individual models and views as they made sense. The hardest part was trying to mesh together the Google map objects and my custom objects in a way that wasn't too tightly coupled.
+
+Since I needed a way to update a few views based on address changes, I also made my own vent object (event aggregator) by extending Backbone.Events. There may be a better "Backbone way" of firing custom events, but this was my workaround.
 
 # Improvements
 
