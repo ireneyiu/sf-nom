@@ -5,15 +5,16 @@ App.Models.Center = Backbone.Model.extend({
     title: "Current Location"
   },
   initialize: function() {
-  	this.getCurrentPosition();
+    _.bindAll(this, 'setLatLng');
+  	this.getGeolocation();
   },
-  getCurrentPosition: function() {
-  	var self = this;
+  getGeolocation: function() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        self.set('latitude', position.coords.latitude);
-        self.set('longitude', position.coords.longitude);
-      });
+      navigator.geolocation.getCurrentPosition(this.setLatLng);
     }
+  },
+  setLatLng: function(position) {
+    this.set('latitude', position.coords.latitude);
+    this.set('longitude', position.coords.longitude);
   }
 });
