@@ -2,9 +2,7 @@ from flask import Flask
 from flask.ext.assets import Environment, Bundle
 from webassets.filter import Filter
 
-app = Flask(__name__, instance_relative_config=True)
-app.config.from_object('app.config')
-app.config.from_pyfile('application.cfg', silent=True)
+app = Flask(__name__)
 
 assets = Environment(app)
 
