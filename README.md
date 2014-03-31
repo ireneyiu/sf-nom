@@ -2,7 +2,7 @@
 
 This application allows you to find food trucks hear a location in San Francisco.
 
-Available here: [](http://sf-nom.herokuapp.com)
+Available here: [Heroku](http://sf-nom.herokuapp.com)
 By [Irene Yiu](http://www.ireneyiu.com)
 [GitHub](http://github.com/ireneyiu) | [LinkedIn](http://www.linkedin.com/in/ireneyiu)
 
