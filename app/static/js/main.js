@@ -8,7 +8,8 @@ $(document).on('ready', function() {
 	var vent = {};
 	_.extend(vent, Backbone.Events);
 
-  var mapView = new App.Views.MapView({vent: vent, model: new App.Models.Map()});
+  var center = new App.Models.Center();
+  var mapView = new App.Views.MapView({vent: vent, model: new App.Models.Map({center: center}) });
   new App.Views.SearchView({vent: vent, map: mapView.map}).render();
 
 	var locationView = new App.Views.LocationView({
@@ -17,5 +18,5 @@ $(document).on('ready', function() {
 		icon: '/static/img/truck-icon.png'
 	});
 
-  var centerView = new App.Views.CenterView({vent: vent, model: new App.Models.Center(), map: mapView.map});
+  var centerView = new App.Views.CenterView({vent: vent, model: center, map: mapView.map});
 });
