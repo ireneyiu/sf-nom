@@ -1,5 +1,8 @@
 App.Views.SearchView = Backbone.View.extend({
-  el: '#search',
+  el: '.searchbar',
+  events: {
+    'submit': 'submit'
+  },
   initialize: function(options) {
     _.bindAll(this, 'render', 'search');
     this.vent = options.vent;
@@ -8,13 +11,17 @@ App.Views.SearchView = Backbone.View.extend({
     this.render();
   },
   render: function() {
-    var autocomplete = new google.maps.places.Autocomplete(this.el);
+    var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search'));
     autocomplete.bindTo('bounds', this.map);
     google.maps.event.addListener(autocomplete, 'place_changed', this.search);
   },
+  submit: function() {
+    event.preventDefault();
+    this.search();
+  },
   search: function() {
     var self = this;
-    var location = this.$el.val();
+    var location = this.$el.find('input').val();
     this.geocoder.geocode({'address': location}, function(results, status) {
       self.vent.trigger('address:update', results[0].geometry.location);
     });
