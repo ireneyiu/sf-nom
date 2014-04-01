@@ -32,6 +32,6 @@ Since I needed a way to update a few views based on address changes, I also made
 
 Given more time, I would have done the following:
 
-- DB Storage: Store the data in a database like MongoDB, since the conversion from JSON to BSON should be rather easy. This way, I can allow the user to filter the food trucks by type, items, etc. using the cached data.
+- DB Storage: Allow the user to filter the food trucks by type, items, etc. To do so, I would store the data in a database like MongoDB, since the data is already in JSON, and the conversion to BSON should be rather easy. And, as a NoSQL datbase, the lookups should be faster than in a traditional SQL database.
 - Testing: Test the frontend using Jasmine and the backend using Flask-Testing.
 - User Interface: Add a spinner when fetching the food truck locations. Animate the dropping of trucks.
