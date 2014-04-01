@@ -13,7 +13,9 @@ Author: [Irene Yiu](http://www.ireneyiu.com)
 - [Flask-Assets](http://flask-assets.readthedocs.org/en/latest/)
 - [San Francisco Data](https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat)
 
-I chose to create a minimal backend using Flask. I have no prior Flask experience and very minimal dabbling with Django, so this was pretty new to me. However, I wanted to have a clear separation of concerns, especially if I build this into larger application in the future. I have a separate __init__.py file to setup and configure the web assets, and a views.py file with the actual routes. 
+I chose to create a minimal backend using Flask. Since I only have two routes, and Flask is a very lightweight framework, it seemed like a good fit. I have no prior Flask experience and very minimal dabbling with Django, so this was pretty new to me.
+
+While the backend is minimal, I still wanted to structure the app in a way that indicated a clear separation of concerns. I have a separate __init__.py file to setup and configure the web assets, and a views.py file with the actual routes. It may be overkill for a simple app, but I figured this way would be best in case I decide to build this into a larger app in the future.
 
 # Frontend
 
